@@ -1,0 +1,28 @@
+.Logo{
+    height: 50px;
+    color: white;
+}
+
+.NavBar{
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-around;
+    background-color: #CDF0EA;
+}
+
+.Carrito{
+    height: 50px;
+    max-width: 50px;
+    color: white;
+}
+
+.Main{
+    height: 100vh;
+    background-color: #F2F2F2;
+}
+
+.Footer{
+    height: 35vh;
+    background-color: #CDF0EA;
+}
