@@ -3,12 +3,13 @@
     color: white;
 }
 
-.NavBar{
+.NavBar-Conteiner{
     display: flex;
     position: sticky;
     top: 0;
     justify-content: space-around;
     background-color: #CDF0EA;
+    align-items: center;
 }
 
 .Carrito{
@@ -25,4 +26,19 @@
 .Footer{
     height: 35vh;
     background-color: #CDF0EA;
+}
+
+.enlase{
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    color: black;
+    height: 100%;
+}
+
+.links{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
