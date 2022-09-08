@@ -1,0 +1,9 @@
+.ItemListcontainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Item{
+    text-align: center;
+}

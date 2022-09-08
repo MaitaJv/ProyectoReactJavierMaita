@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Header.css";
 
-function Carrito(){
+function CartWidget(){
     return(
         <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,4 +25,4 @@ function Carrito(){
     );
 }
 
-export default Carrito;
+export default CartWidget;
