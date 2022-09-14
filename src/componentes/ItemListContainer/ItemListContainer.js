@@ -1,9 +1,16 @@
 import './ItemListContainerCss.css'
+import './ItemCount/ItemCount'
+import ItemCount from './ItemCount/ItemCount';
 
-function ItemListContainer({greeting}){
+function ItemListContainer(){
+
+    const onAdd = (count) => {
+        console.log(`Se agregan ${count} productos`);
+    }
+
     return(
         <div className='ItemListcontainer'>
-            <h1 className='Item'>{greeting}</h1>
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         </div>
     );
 }
