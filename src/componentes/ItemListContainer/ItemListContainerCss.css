@@ -47,3 +47,12 @@ html{
     border-radius: 1rem;
     background: none;
 }
+
+.nombre{
+    margin-bottom: 0;
+}
+
+.price{
+    font-size: 1rem;
+    margin-bottom: 0;
+}
