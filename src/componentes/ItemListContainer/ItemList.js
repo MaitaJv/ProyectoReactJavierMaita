@@ -1,6 +1,6 @@
 import './ItemListContainerCss.css'
 import './ItemCount/ItemCount'
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Item from './Item';
 
 function ItemList ({ products }){
@@ -8,7 +8,7 @@ function ItemList ({ products }){
     return(
         <div className='ItemListcontainer'>
             {products.map((product) =>
-                <Item key={product.id} product={product} />
+                <Item key={product.id} product={product} stock={Math.floor(Math.random() * 50)}/>
             )}
         </div>
     )
