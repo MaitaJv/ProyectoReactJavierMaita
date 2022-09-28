@@ -1,16 +1,20 @@
 import React, {useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
+import {API} from './../API/Api'
+import { useParams } from "react-router-dom";
 
 function ItemDetailContainer () {
 
+    const { id } = useParams();
     const [producto, setProducto] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
 
+        const url = `${API.PRODUCTO}${id}`;
         const GetItem = async ()=> {
             try{
-                let promesa = await fetch('https://fakestoreapi.com/products/1')
+                let promesa = await fetch(url)
                 let respuesta = await promesa.json()
                 setProducto(respuesta)
                 console.log(respuesta);
@@ -25,7 +29,7 @@ function ItemDetailContainer () {
 
         GetItem()
 
-    },[])
+    },[id])
 
     return (
         <div>

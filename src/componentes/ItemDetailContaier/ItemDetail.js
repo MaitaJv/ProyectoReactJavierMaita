@@ -10,11 +10,11 @@ const ItemDetail = ({producto, stock}) => {
 
   return (
     <div className='itemCard'>
-        <img src={producto.image} height={200}/>
-        <h4>{producto.title}</h4>
-        <p>{producto.description}</p>
-        <p>{producto.price}</p>
-        <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+      <img src={producto.image} height={200}/>
+      <h4>{producto.title}</h4>
+      <p>{producto.description}</p>
+      <p>${producto.price}</p>
+      <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
     </div>
   )
 }

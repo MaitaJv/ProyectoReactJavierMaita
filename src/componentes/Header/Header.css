@@ -3,11 +3,25 @@
     color: white;
 }
 
+.NavLink{
+    text-decoration: none;
+    color: black;
+    margin-right: 1rem;
+}
+.NavBar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.NavBarMe{
+    width: 40vw;
+}
+
 .NavBar-Conteiner{
     height: 80px;
+    width: 100vw;
     display: flex;
-    position: sticky;
-    top: 0;
+    position: relative;
     justify-content: space-around;
     background-color: #CDF0EA;
     align-items: center;
@@ -38,7 +52,6 @@
 }
 
 .links{
-    width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
