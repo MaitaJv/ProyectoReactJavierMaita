@@ -7,10 +7,6 @@ import { Link } from "react-router-dom";
 function Item ({ product, stock}){
 
     console.log(stock)
-    
-    const onAdd = (count) => {
-        console.log(`Se agregan ${count} productos`);
-    }
 
     return(
         <div className='card'>
@@ -26,7 +22,6 @@ function Item ({ product, stock}){
             <Link to={`/product/${product.id}`}>
                 <button>Ver detalles</button>
             </Link>
-            <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
         </div>)
 
     
