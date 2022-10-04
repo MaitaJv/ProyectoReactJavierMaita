@@ -22,7 +22,8 @@ function Item ({ product, stock}){
             <Link to={`/product/${product.id}`}>
                 <button>Ver detalles</button>
             </Link>
-        </div>)
+        </div>
+    )
 
     
 }

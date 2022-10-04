@@ -1,58 +1,62 @@
-.Logo{
+.Header{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    background-color: #DDDDDD;
+}
+
+.BrandLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.CartLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
+    color: black;
+}
+
+.Brand{
     height: 50px;
-    color: white;
+    margin: auto 10rem auto 0;
+}
+
+.Carrito{
+    height: 50px;
+    width: 50px;
+    margin: auto 0 auto 10rem;
+}
+
+.Buscador{
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Input{
+    width: 50%;
 }
 
 .NavLink{
     text-decoration: none;
     color: black;
-    margin-right: 1rem;
+    margin: 0 1rem;
 }
+
 .NavBar{
-    display: flex;
-    justify-content: space-around;
-}
-
-.NavBarMe{
-    width: 40vw;
-}
-
-.NavBar-Conteiner{
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    background-color: #CDF0EA;
-    align-items: center;
-}
-
-.Carrito{
-    height: 35px;
-    max-width: 50px;
-    color: black;
-}
-
-.Main{
-    height: 100vh;
-    background-color: #F2F2F2;
-}
-
-.Footer{
-    height: 35vh;
-    background-color: #CDF0EA;
-}
-
-.enlase{
-    text-decoration: none;
-    text-align: center;
-    align-items: center;
-    color: black;
-    height: 100%;
-}
-
-.links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 1rem;
 }

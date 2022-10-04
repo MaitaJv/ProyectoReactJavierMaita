@@ -1,14 +1,21 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import ItemCount from '../ItemListContainer/ItemCount/ItemCount';
 import ItemAfterCount from '../ItemListContainer/ItemCount/ItemAfterCount';
+import { Context } from '../Context/CartContext';
 import './ItemDetail.css'
 
 const ItemDetail = ({producto, stock}) => {
   const [compra, setCompra] = useState(0)
 
+  const [inCart, setInCart] = useState(0)
+
+  const { addItem } = useContext(Context);
+
   const onAdd = (count) => {
-    setCompra(1)
-    console.log(`Se agregan ${count} productos`);
+    setCompra(compra + 1)
+    setInCart(inCart + 1)
+
+    addItem(producto, count, inCart)
   }
 
   return (
@@ -19,12 +26,11 @@ const ItemDetail = ({producto, stock}) => {
           <h4>{producto.title}</h4>
           <p>{producto.description}</p>
           <p>${producto.price}</p>
-          {
-            compra?
-              <ItemAfterCount />
-            :
+            {compra > 1?
+              <ItemAfterCount/>
+              :
               <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
-          }
+              }
         </div>
       </div>
     </div>
