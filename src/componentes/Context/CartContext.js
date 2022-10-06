@@ -22,6 +22,9 @@ function CartContext({children}) {
     const removeItem = (producto)=>{    
         const newCart = cart.filter(oldItem => oldItem.producto !== producto)
         setCart([...newCart])
+        console.log(producto)
+        console.log("Context")
+        console.log(newCart)
     }
 
     const reset = ()=>{
@@ -29,7 +32,7 @@ function CartContext({children}) {
     }
 
   return (
-    <Context.Provider value={{addItem, removeItem, reset}}>
+    <Context.Provider value={{addItem, removeItem, reset, cart}}>
         {children}
     </Context.Provider>
   )

@@ -1,0 +1,20 @@
+.CartPage{
+    width: 60vw;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.ItemCart{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+}
+
+.ItemCartImage{
+    height: 100px;
+}
+
+.ItemCartTitle{
+    font-size: 1.5rem;
+}

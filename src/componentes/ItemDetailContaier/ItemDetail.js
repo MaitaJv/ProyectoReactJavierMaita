@@ -12,7 +12,7 @@ const ItemDetail = ({producto, stock}) => {
   const { addItem } = useContext(Context);
 
   const onAdd = (count) => {
-    setCompra(compra + 1)
+    setCompra(1)
     setInCart(inCart + 1)
 
     addItem(producto, count, inCart)
@@ -26,7 +26,7 @@ const ItemDetail = ({producto, stock}) => {
           <h4>{producto.title}</h4>
           <p>{producto.description}</p>
           <p>${producto.price}</p>
-            {compra > 1?
+            {compra?
               <ItemAfterCount/>
               :
               <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
