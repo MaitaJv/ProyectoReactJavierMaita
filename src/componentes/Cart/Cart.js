@@ -32,7 +32,7 @@ const Cart = () => {
       console.log(result.id)
       setCompraId(result.id)
       cart.forEach(producto => {
-        //actualizarStock(producto)
+        actualizarStock(producto)
       });
       limpiar();
     })
