@@ -21,6 +21,7 @@ function ItemDetailContainer () {
             id: result.id,
             ...result.data(),
             });
+            console.log(producto.stock)
         })
         .catch(() => {
             console.log("ERROR");
@@ -57,7 +58,7 @@ function ItemDetailContainer () {
             {
                 loading
                 ? <p>Loading...</p>
-                : <ItemDetail producto={producto} stock={Math.floor(Math.random() * 50)}/>
+                : <ItemDetail producto={producto} stock={producto.stock}/>
             }
         </div>
     )
