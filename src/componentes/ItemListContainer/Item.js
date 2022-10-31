@@ -12,16 +12,18 @@ function Item ({ product, stock}){
         <div className='card'>
             <div className='info'>
                 <div className='imagenContainer'>
-                    <img src={product.image} height='200px' className='imagen'/>
+                    <img src={product.image} height='150px' className='imagen'/>
                 </div>
             </div>
-            <div className='nombre'>
+            <div className='softInfo'>
                 <p className='nombre'>{product.title}</p>
                 <p className='price'>${product.price}</p>
             </div>
-            <Link to={`/product/${product.id}`}>
-                <button>Ver detalles</button>
-            </Link>
+            <div className='viewDetail'>
+                <Link to={`/product/${product.id}`}>
+                    <button className='detailBtn'>Ver detalles</button>
+                </Link>
+            </div>
         </div>
     )
 

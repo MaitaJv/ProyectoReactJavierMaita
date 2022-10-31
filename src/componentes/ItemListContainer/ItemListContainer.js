@@ -4,7 +4,6 @@ import React, {useState, useEffect} from 'react';
 import ItemList from './ItemList';
 import Carrusel from '../Carrusel/Carrusel';
 import { Form, useParams } from "react-router-dom";
-import { API } from "./../API/Api"
 import Spinner from 'react-bootstrap/Spinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { db } from "../../firebase/Firebase";
@@ -17,6 +16,8 @@ function ItemListContainer(){
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+
+        setLoading(true)
 
         const productsCollection = collection(db, "productos");
         const q = query(productsCollection, where("category", "==", `${id}`));
@@ -40,28 +41,6 @@ function ItemListContainer(){
             setLoading(false);
         });
 
-
-
-
-        // const url = id ? `${API.CATEGORY}${id}` : API.LIST;
-        // const GetProduct = async ()=>{
-        //     try{
-        //         setLoading(true)
-        //         let promesa = await fetch(url)
-        //         let data = await promesa.json()
-        //         setProducts(data)
-        //         console.log(data)
-        //     }
-        //     catch{
-        //         console.error("error")
-        //     }
-        //     finally{
-        //         setLoading(false)
-        //     }
-        // }
-
-        // GetProduct()
-
     }, [id])
 
     return(
@@ -77,7 +56,8 @@ function ItemListContainer(){
                     id 
                     ? (
                         <ItemList products={products} categoria={id}/>
-                    ):
+                    )
+                    :
                     (
                         <>
                             <Carrusel/>

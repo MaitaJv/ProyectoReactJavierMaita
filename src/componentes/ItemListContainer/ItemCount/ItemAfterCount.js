@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../ItemListContainerCss.css'
 
 const ItemAfterCount = () => {
   return (
-    <Link to="/cart">
+    <div className='agregarContainer'>
+      <Link to="/cart">
         <button className='btn'>Finalizar compra</button>
-    </Link>
+      </Link>
+    </div>
+    
   )
 }
 

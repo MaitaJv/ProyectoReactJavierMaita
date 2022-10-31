@@ -21,16 +21,26 @@ const ItemDetail = ({producto, stock}) => {
   return (
     <div className='itemCardPage'>
       <div className='itemCard'>
-        <img src={producto.image} className='detailImg'/>
-        <div>
-          <h4>{producto.title}</h4>
-          <p>{producto.description}</p>
-          <p>${producto.price}</p>
-            {compra?
-              <ItemAfterCount/>
-              :
-              <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
-              }
+        <div className='itemInfoContainer'>
+          <div className='detailImgContainer'>
+            <img src={producto.image} className='detailImg'/>
+          </div>
+          <div className='itemInfo'>
+            <h4>{producto.title}</h4>
+            <div>
+              <p className='precio'>${producto.price}</p>
+              <p>Stock disponible: {stock}</p>
+              {compra?
+                <ItemAfterCount/>
+                :
+                <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+                }
+            </div>
+          </div>
+          <div className='description'>
+            <h5>Descripcion del producto</h5>
+            <p>{producto.description}</p>
+          </div>
         </div>
       </div>
     </div>

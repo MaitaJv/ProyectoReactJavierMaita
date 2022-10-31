@@ -50,7 +50,7 @@ function CartWidget(){
             {
                 productos !== 0
                 ?
-                <p>{productos}</p>
+                <p className="productsQ">{productos}</p>
                 :
                 <p className="Nada"></p>
             }

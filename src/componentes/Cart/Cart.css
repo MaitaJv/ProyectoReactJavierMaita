@@ -1,20 +1,129 @@
 .CartPage{
     width: 60vw;
+    min-height: 80%;
     margin: 1rem auto;
     background-color: white;
     border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.ItemCart{
+.CartItemContainer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ItemCart{
+    display: grid;
+    grid-template-columns: 200px 500px 200px;
     margin: 1rem 2rem;
+}
+
+.ItemCartImageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .ItemCartImage{
     height: 100px;
 }
 
+.ItemCartTitleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .ItemCartTitle{
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.ItemCartPricesContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemCartPricesText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 150px;
+}
+
+.margin0{
+    margin: 0;
+}
+
+.cartState{
+    text-align: center;
+}
+
+.totalContainer{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.Price{
+    width: 10rem;
+}
+
+.DeleteCrossBtn{
+    background: none;
+    border: none;
+}
+
+.DeleteCross{
+    height: 2rem;
+}
+
+@media (min-width:1151px) and (max-width:1500px) {
+
+    .ItemCart{
+        display: grid;
+        grid-template-columns: 200px 300px 200px;
+        margin: 1rem 2rem;
+    }
+
+    .ItemCartImage{
+        height: 85px;
+    }
+}
+
+@media (min-width:801px) and (max-width:1150px) {
+
+    .ItemCart{
+        display: grid;
+        grid-template-columns: 150px 200px 150px;
+        margin: 1rem 2rem;
+    }
+
+    .ItemCartImage{
+        height: 50px;
+    }
+}
+
+@media (max-width:800px) {
+
+    .ItemCartTitleContainer{
+        display: none;
+    }
+
+    .ItemCart{
+        display: grid;
+        grid-template-columns: 150px 150px;
+        margin: 1rem 2rem;
+    }
+
+    .ItemCartImage{
+        height: 35px;
+    }
 }
